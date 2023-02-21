@@ -17,6 +17,13 @@
 		9ED360DD29A4B15F00DA04BB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360DC29A4B15F00DA04BB /* Product.swift */; };
 		9ED360E029A4B18600DA04BB /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360DE29A4B18600DA04BB /* ProductInfo.swift */; };
 		9ED360E129A4B18600DA04BB /* AppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360DF29A4B18600DA04BB /* AppClient.swift */; };
+		9ED360E829A4B23D00DA04BB /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360E429A4B23D00DA04BB /* FavouritesView.swift */; };
+		9ED360EA29A4B23D00DA04BB /* AllProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360E629A4B23D00DA04BB /* AllProductsView.swift */; };
+		9ED360EB29A4B23D00DA04BB /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360E729A4B23D00DA04BB /* ProductListView.swift */; };
+		9ED360F029A4B28800DA04BB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360EC29A4B28800DA04BB /* State.swift */; };
+		9ED360F129A4B28800DA04BB /* WineGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360ED29A4B28800DA04BB /* WineGalleryViewModel.swift */; };
+		9ED360F329A4B28800DA04BB /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360EF29A4B28800DA04BB /* Actions.swift */; };
+		9ED360F629A4B2DF00DA04BB /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360F529A4B2DF00DA04BB /* AsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,13 @@
 		9ED360DC29A4B15F00DA04BB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9ED360DE29A4B18600DA04BB /* ProductInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
 		9ED360DF29A4B18600DA04BB /* AppClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
+		9ED360E429A4B23D00DA04BB /* FavouritesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		9ED360E629A4B23D00DA04BB /* AllProductsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllProductsView.swift; sourceTree = "<group>"; };
+		9ED360E729A4B23D00DA04BB /* ProductListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		9ED360EC29A4B28800DA04BB /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		9ED360ED29A4B28800DA04BB /* WineGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineGalleryViewModel.swift; sourceTree = "<group>"; };
+		9ED360EF29A4B28800DA04BB /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		9ED360F529A4B2DF00DA04BB /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +116,11 @@
 			children = (
 				9ED360B029A4B0BB00DA04BB /* WineGalleryApp.swift */,
 				9ED360B229A4B0BB00DA04BB /* ContentView.swift */,
+				9ED360E329A4B22100DA04BB /* Views */,
+				9ED360E229A4B20F00DA04BB /* ViewModel */,
 				9ED360DB29A4B14100DA04BB /* Domain */,
 				9ED360DA29A4B13B00DA04BB /* Infra */,
+				9ED360F429A4B2DF00DA04BB /* HelperClasses */,
 				9ED360B429A4B0BE00DA04BB /* Assets.xcassets */,
 				9ED360B629A4B0BE00DA04BB /* Preview Content */,
 			);
@@ -150,6 +167,34 @@
 				9ED360DE29A4B18600DA04BB /* ProductInfo.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		9ED360E229A4B20F00DA04BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9ED360EF29A4B28800DA04BB /* Actions.swift */,
+				9ED360EC29A4B28800DA04BB /* State.swift */,
+				9ED360ED29A4B28800DA04BB /* WineGalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9ED360E329A4B22100DA04BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9ED360E629A4B23D00DA04BB /* AllProductsView.swift */,
+				9ED360E429A4B23D00DA04BB /* FavouritesView.swift */,
+				9ED360E729A4B23D00DA04BB /* ProductListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9ED360F429A4B2DF00DA04BB /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9ED360F529A4B2DF00DA04BB /* AsyncImage.swift */,
+			);
+			path = HelperClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,10 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED360F129A4B28800DA04BB /* WineGalleryViewModel.swift in Sources */,
+				9ED360EA29A4B23D00DA04BB /* AllProductsView.swift in Sources */,
 				9ED360E129A4B18600DA04BB /* AppClient.swift in Sources */,
 				9ED360B329A4B0BB00DA04BB /* ContentView.swift in Sources */,
+				9ED360F629A4B2DF00DA04BB /* AsyncImage.swift in Sources */,
 				9ED360E029A4B18600DA04BB /* ProductInfo.swift in Sources */,
 				9ED360B129A4B0BB00DA04BB /* WineGalleryApp.swift in Sources */,
+				9ED360F029A4B28800DA04BB /* State.swift in Sources */,
+				9ED360EB29A4B23D00DA04BB /* ProductListView.swift in Sources */,
+				9ED360F329A4B28800DA04BB /* Actions.swift in Sources */,
+				9ED360E829A4B23D00DA04BB /* FavouritesView.swift in Sources */,
 				9ED360DD29A4B15F00DA04BB /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
