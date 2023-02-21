@@ -8,7 +8,6 @@
 import SwiftUI
 
 ///ProductListView - This View will display complete List of Products
-
 struct ProductListView: View {
     let productInfos: [ProductInfo]
     @ObservedObject var viewModel: WineGalleryViewModel
@@ -17,7 +16,18 @@ struct ProductListView: View {
         VStack {
             List {
                 ForEach(productInfos) { info in
-                    ProductRowView(viewModel: viewModel, info: info)
+                    NavigationLink {
+                        DetailProductView(
+                            viewModel: .init(
+                                productInfo: info,
+                                pushBack: { updatedInfo in
+                                    viewModel.handle(.update(updatedInfo))
+                                }
+                            )
+                        )
+                    } label: {
+                        ProductRowView(viewModel: viewModel, info: info)
+                    }
                 }
             }
         }

@@ -24,6 +24,8 @@
 		9ED360F129A4B28800DA04BB /* WineGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360ED29A4B28800DA04BB /* WineGalleryViewModel.swift */; };
 		9ED360F329A4B28800DA04BB /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360EF29A4B28800DA04BB /* Actions.swift */; };
 		9ED360F629A4B2DF00DA04BB /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360F529A4B2DF00DA04BB /* AsyncImage.swift */; };
+		9ED360F829A4B55300DA04BB /* WineDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360F729A4B55300DA04BB /* WineDetailViewModel.swift */; };
+		9ED360FA29A4B56100DA04BB /* DetailProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360F929A4B56100DA04BB /* DetailProductView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		9ED360ED29A4B28800DA04BB /* WineGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineGalleryViewModel.swift; sourceTree = "<group>"; };
 		9ED360EF29A4B28800DA04BB /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		9ED360F529A4B2DF00DA04BB /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		9ED360F729A4B55300DA04BB /* WineDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineDetailViewModel.swift; sourceTree = "<group>"; };
+		9ED360F929A4B56100DA04BB /* DetailProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 				9ED360EF29A4B28800DA04BB /* Actions.swift */,
 				9ED360EC29A4B28800DA04BB /* State.swift */,
 				9ED360ED29A4B28800DA04BB /* WineGalleryViewModel.swift */,
+				9ED360F729A4B55300DA04BB /* WineDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				9ED360E629A4B23D00DA04BB /* AllProductsView.swift */,
 				9ED360E429A4B23D00DA04BB /* FavouritesView.swift */,
 				9ED360E729A4B23D00DA04BB /* ProductListView.swift */,
+				9ED360F929A4B56100DA04BB /* DetailProductView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +342,8 @@
 				9ED360B129A4B0BB00DA04BB /* WineGalleryApp.swift in Sources */,
 				9ED360F029A4B28800DA04BB /* State.swift in Sources */,
 				9ED360EB29A4B23D00DA04BB /* ProductListView.swift in Sources */,
+				9ED360FA29A4B56100DA04BB /* DetailProductView.swift in Sources */,
+				9ED360F829A4B55300DA04BB /* WineDetailViewModel.swift in Sources */,
 				9ED360F329A4B28800DA04BB /* Actions.swift in Sources */,
 				9ED360E829A4B23D00DA04BB /* FavouritesView.swift in Sources */,
 				9ED360DD29A4B15F00DA04BB /* Product.swift in Sources */,

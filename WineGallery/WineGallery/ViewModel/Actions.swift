@@ -29,3 +29,22 @@ enum MainAction {
     ///This contains updated ProductInfo object, based on this ProductInfo we need to update our ProductInfo
     case update(ProductInfo)
 }
+
+/// DetailAction defines all the actions invloved in DetailProductView
+/// Currently i have added cases based on current DetailProductView functionality, can be extended easily to support new actions
+
+enum DetailAction {
+    ///markFavourite - This action will mark ProductInfo as Favourite
+    ///- Parameters:ProductInfo
+    ///This contains ProductInfo object that need to marked as Favourite
+    case markFavourite(ProductInfo)
+    
+    ///unmarkFavourite - This action will remove @ProductInfo from Favourite
+    ///- Parameters:ProductInfo
+    ///This contains ProductInfo object that need to removed as Favourite
+    case unmarkFavourite(ProductInfo)
+
+    ///back - This action notify the the calling view, we are moving back to calling view from detailView
+    ///We can use this action to update the data based on DetailView data.
+    case back
+}
