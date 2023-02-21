@@ -8,29 +8,58 @@
 import XCTest
 @testable import WineGallery
 
+@testable import WineGallery
+
 final class WineGalleryTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testItShouldNotHaveRetainCycle() throws {
+        weak var weakVCReference: WineGalleryViewModel?
+        autoreleasepool {
+            let strongVCReference = WineGalleryViewModel(appClient: .fakeError)
+            weakVCReference = strongVCReference
+            XCTAssertNotNil(weakVCReference)
+        }
+        XCTAssertNil(weakVCReference)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testItShouldHaveLoadingStateInitially() throws {
+     let sut = WineGalleryViewModel(appClient: .fakeSuccess)
+        XCTAssertEqual(sut.state, .loading)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testItShouldSetErrorStateWhenNetworkMalfuntions() throws {
+      let sut = WineGalleryViewModel(appClient: .fakeError)
+        sut.handle(.refresh)
+        XCTAssertEqual(sut.state, .error)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testItShouldHaveProductsWhenSuccess() throws {
+        let sut = WineGalleryViewModel(appClient: .fakeSuccess)
+        sut.handle(.refresh)
+        guard case .products(let infos) = sut.state else { return XCTFail("System in volatile state.") }
+        let frozenTitles = infos.map { $0.product.title }
+        let expectedTitles = ["Dummy Product", "Dummy Product", "Dummy Product"]
+        XCTAssertEqual(frozenTitles, expectedTitles)
+    }
+
+    func testItShouldUnMarkFavourite() throws {
+        let sut = WineGalleryViewModel(appClient: .fakeSuccess)
+        sut.handle(.refresh)
+        guard case .products(let infos) = sut.state else { return XCTFail("System in volatile state.") }
+        let previousState = infos[0].isFavourite
+        sut.handle(.unmarkFavourite(infos[0]))
+        guard case .products(let infos) = sut.state else { return XCTFail("System in volatile state.") }
+        XCTAssertNotEqual(infos[0].isFavourite, previousState)
+    }
+}
+
+extension XCTestCase {
+    func wait(for waitTime: TimeInterval, message: String, testFor assertBlock: @escaping ()-> Void) {
+        let fetchedExpectation = expectation(description: message)
+        defer { wait(for: [fetchedExpectation], timeout: waitTime + 0.05) }
+        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
+            fetchedExpectation.fulfill()
+            assertBlock()
         }
     }
-
 }
