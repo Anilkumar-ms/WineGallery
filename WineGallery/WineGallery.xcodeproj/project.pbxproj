@@ -26,6 +26,7 @@
 		9ED360F629A4B2DF00DA04BB /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360F529A4B2DF00DA04BB /* AsyncImage.swift */; };
 		9ED360F829A4B55300DA04BB /* WineDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360F729A4B55300DA04BB /* WineDetailViewModel.swift */; };
 		9ED360FA29A4B56100DA04BB /* DetailProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360F929A4B56100DA04BB /* DetailProductView.swift */; };
+		9ED360FC29A4B73900DA04BB /* WineDetailGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED360FB29A4B73900DA04BB /* WineDetailGalleryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		9ED360F529A4B2DF00DA04BB /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		9ED360F729A4B55300DA04BB /* WineDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineDetailViewModel.swift; sourceTree = "<group>"; };
 		9ED360F929A4B56100DA04BB /* DetailProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProductView.swift; sourceTree = "<group>"; };
+		9ED360FB29A4B73900DA04BB /* WineDetailGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailGalleryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				9ED360C129A4B0BE00DA04BB /* WineGalleryTests.swift */,
+				9ED360FB29A4B73900DA04BB /* WineDetailGalleryTests.swift */,
 			);
 			path = WineGalleryTests;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED360FC29A4B73900DA04BB /* WineDetailGalleryTests.swift in Sources */,
 				9ED360C229A4B0BE00DA04BB /* WineGalleryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
